@@ -1,5 +1,5 @@
 
-# EJ2 DropDownList input height override.
+# EJ2 DropDownList selection
 
 ## Installing
 
