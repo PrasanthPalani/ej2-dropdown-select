@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DropDownListComponent } from '@syncfusion/ej2-ng-dropdowns';
-import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data'
+import { Query, DataManager, ODataAdaptor } from '@syncfusion/ej2-data'
 
 @Component({
     selector: 'my-app',
@@ -12,14 +12,14 @@ export class AppComponent {
     }
     //bind the DataManager instance to dataSource property
     public data: DataManager = new DataManager({
-            url: 'http://services.odata.org/V4/Northwind/Northwind.svc/',
-            adaptor: new ODataV4Adaptor,
-            crossDomain: true
-        });
+        url: 'http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc',
+        adaptor: new ODataAdaptor,
+        crossDomain: true
+    });
     // maps the appropriate column to fields property
     public fields: Object = { text: 'CustomerID', value: 'OrderID' };
     //bind the Query instance to query property
-    public query: Query = new Query().from('Orders').select(['CustomerID', 'OrderID']).take(100);
+    public query: Query = new Query().from('Orders').select(['CustomerID', 'OrderID']).take(850);
     //set the placeholder to DropDownList input
     public text: string = "Select a customer";
     //sort the result items
